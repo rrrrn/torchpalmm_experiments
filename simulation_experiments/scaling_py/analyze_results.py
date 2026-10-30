@@ -2,7 +2,7 @@
 Task-level relative-error boxplots for the scaling_py pilots (pz_scaling_ss, ss_scaling):
 rows = pilot, columns = metric, one box per D_type at each swept value.
 
-Run from: experiments/scaling_py/
+Run from: simulation_experiments/scaling_py/
     python analyze_results.py
 """
 import importlib.util

@@ -11,7 +11,7 @@ values it "covered" were silently missing columns or on a different footing
 than a genuinely local fit. An sn with no local rows now just shows "no
 results" until it's actually fit here.
 
-Run from: experiments/scaling_py/ss_scaling/
+Run from: simulation_experiments/scaling_py/ss_scaling/
     python analyze_results.py
 """
 import glob

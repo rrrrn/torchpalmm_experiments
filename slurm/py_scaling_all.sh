@@ -1,12 +1,12 @@
 #!/bin/bash
-# Submits both experiments/scaling_py/ pilots (ss_scaling, pz_scaling_ss) --
+# Submits both simulation_experiments/scaling_py/ pilots (ss_scaling, pz_scaling_ss) --
 # python-only, no R baselines, each varying exactly one of {sn, pz} off the shared
 # default point (sn=1, px=2, pz=2, N=1000). Each pilot is generate -> fit array
 # (value x D_type), chained with --dependency=afterok. No analyze job is submitted
 # here -- results are synced to a local machine and analyzed there.
 #
 # Resume-aware PER VALUE, not just per pilot -- coverage_check.py (in
-# experiments/scaling_py/) loads each value through that pilot's own
+# simulation_experiments/scaling_py/) loads each value through that pilot's own
 # analyze_results.py _load() (local results/ only -- no sibling-experiment
 # fallback, best-lr dedup, _KEEP filtering: the exact same data
 # scaling_overview.png / scaling_progress.png show) and reports a value
@@ -41,7 +41,7 @@ TARGET="${REPS:-100}"   # converged reps required per (value, D_type) to count a
 PARTITION="standard"; ACCOUNT="${SLURM_ACCOUNT:?export SLURM_ACCOUNT=<your SLURM account>}"
 PROJECT_ROOT="$(pwd)"
 bash "$PROJECT_ROOT/slurm/check_torchpalmm.sh" || exit 1
-PARENT_DIR="$PROJECT_ROOT/experiments/scaling_py"
+PARENT_DIR="$PROJECT_ROOT/simulation_experiments/scaling_py"
 LOG_ROOT="$PROJECT_ROOT/slurm/logs_scaling_py"
 mkdir -p "$LOG_ROOT"
 
@@ -129,7 +129,7 @@ submit_pilot() {
   echo "[$NAME] gen=$JID_GEN fit=$JID_FIT"
 }
 
-# Keep in sync with each experiments/scaling_py/<pilot>/generate_data.py CONFIG.
+# Keep in sync with each simulation_experiments/scaling_py/<pilot>/generate_data.py CONFIG.
 submit_pilot "ss_scaling"     "sn" "5 10 20 30"          "diagonal unstructured" "48:00:00" "32G"
 submit_pilot "pz_scaling_ss"  "pz" "5 10 20 30"          "diagonal unstructured" "06:00:00" "16G"
 

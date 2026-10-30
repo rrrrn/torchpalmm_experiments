@@ -6,7 +6,7 @@ in every panel is the fitted replicate whose overall ISE is closest to the
 median ISE across those 100 fits.
 
 Run from the project root; reads the default-cell fits in ``results/curve_library/``:
-    python experiments/smoothspline_comparison/plot_curve_library.py
+    python simulation_experiments/smoothspline_comparison/plot_curve_library.py
 """
 import glob
 import os

@@ -18,7 +18,7 @@ accuracy metrics plus wall time as the last column. Each panel is a grouped
 boxplot vs sn (m), colored by lr. Restricted to N=_N_FOCUS (see analyze_results.py's own
 _save_param_table, which makes the same restriction).
 
-Run from: experiments/smoothspline_comparison/
+Run from: simulation_experiments/smoothspline_comparison/
     python analyze_lr.py
 """
 import glob

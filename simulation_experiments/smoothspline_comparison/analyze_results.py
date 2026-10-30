@@ -3,7 +3,7 @@ Mixed (sn-scaling) experiment: writes tables/mixed_param_table.tex and
 plots/mixed_r_failure_diagnostic.png from the lr = 1.0 Python fits and the
 R baselines. Also provides DATA_DIR and _SN_KEEP to analyze_lr.py.
 
-Run from: experiments/smoothspline_comparison/
+Run from: simulation_experiments/smoothspline_comparison/
     python analyze_results.py
 """
 

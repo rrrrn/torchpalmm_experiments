@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repo holds the numerical experiments for [`torchpalmm`](https://github.com/rrrrn/torchpalmm): REML estimation for linear mixed models with additive smoothing-spline components. The data generators live in `SimScripts/` and the experiments in `experiments/`.
+This repo holds the numerical experiments for [`torchpalmm`](https://github.com/rrrrn/torchpalmm): REML estimation for linear mixed models with additive smoothing-spline components. The data generators live in `SimScripts/` and the experiments in `simulation_experiments/`.
 
 ---
 
@@ -55,10 +55,10 @@ Each experiment has its own `generate_data.py` (writes `data/`, which is git-ign
 
 | Folder | Varies | Fixed | Baselines | Outputs |
 |--------|--------|-------|-----------|---------|
-| `experiments/randeff_comparison/` | $q$ = pz in {5, 8, 20}; N in {500, 1000}; D diagonal or unstructured | px = 2, sn = 1, 15 observations per subject, iid residuals | mgcv `gamm` and `bam` (`run_r_baselines.R`) | `plots/randeff_r_failure_diagnostic.png`, `tables/randeff_param_table.tex` |
-| `experiments/smoothspline_comparison/` | $m$ = sn in {1, 5, 10, 15}; N in {500, 1000}; D diagonal or unstructured | px = 2, pz = 2, 15 observations per subject | mgcv `gamm` and `bam` (`run_r_baselines.R`) | `plots/mixed_curve_library.png`, `plots/mixed_r_failure_diagnostic.png`, `plots/mixed_lr_summary.png`, `tables/mixed_param_table.tex` |
-| `experiments/scaling_py/` | `ss_scaling`: sn in {5, 10, 20, 30}; `pz_scaling_ss`: pz in {5, 10, 20, 30} | N = 1000, px = 2 | none (our method only) | `plots/scaling_task_boxplot_relerr.png` |
-| `experiments/gpu_cpu_comparison/` | device (GPU vs CPU) at sn = 10 and 30 | the `ss_scaling` datasets | none | `plots/gpu_cpu_combined.png` |
+| `simulation_experiments/randeff_comparison/` | $q$ = pz in {5, 8, 20}; N in {500, 1000}; D diagonal or unstructured | px = 2, sn = 1, 15 observations per subject, iid residuals | mgcv `gamm` and `bam` (`run_r_baselines.R`) | `plots/randeff_r_failure_diagnostic.png`, `tables/randeff_param_table.tex` |
+| `simulation_experiments/smoothspline_comparison/` | $m$ = sn in {1, 5, 10, 15}; N in {500, 1000}; D diagonal or unstructured | px = 2, pz = 2, 15 observations per subject | mgcv `gamm` and `bam` (`run_r_baselines.R`) | `plots/mixed_curve_library.png`, `plots/mixed_r_failure_diagnostic.png`, `plots/mixed_lr_summary.png`, `tables/mixed_param_table.tex` |
+| `simulation_experiments/scaling_py/` | `ss_scaling`: sn in {5, 10, 20, 30}; `pz_scaling_ss`: pz in {5, 10, 20, 30} | N = 1000, px = 2 | none (our method only) | `plots/scaling_task_boxplot_relerr.png` |
+| `simulation_experiments/gpu_cpu_comparison/` | device (GPU vs CPU) at sn = 10 and 30 | the `ss_scaling` datasets | none | `plots/gpu_cpu_combined.png` |
 
 All experiments use 100 replicates per cell and report the L-BFGS fit at lr = 1.0. `smoothspline_comparison/run_python.py` also fits lr in {1e-3, 1e-1, 1}; `analyze_lr.py` compares them.
 

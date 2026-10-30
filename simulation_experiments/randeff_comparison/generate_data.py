@@ -3,7 +3,7 @@ Random-effects scaling experiment: a single smooth (sn=1) with the number of
 random effects pz swept upward. Isolates how random-effects covariance (D)
 estimation degrades as D grows — unstructured D has pz(pz+1)/2 free params.
 
-Run from: experiments/randeff_comparison/
+Run from: simulation_experiments/randeff_comparison/
     python generate_data.py --N 500
     python generate_data.py            # all N
     python generate_data.py --N 1000 --pz 8

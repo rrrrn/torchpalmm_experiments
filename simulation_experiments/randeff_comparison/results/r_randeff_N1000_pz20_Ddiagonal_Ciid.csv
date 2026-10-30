@@ -1,0 +1,8 @@
+N,pz,D_type,corr,repeat_id,method,converged,timed_out,time_s,n_iter,mem_mb,beta_mse,beta_mae,sigma2_abs_err,D_mse,D_mae,D_full_mse,rho_est,rho_abs_err,ise_macro
+1000,20,diagonal,iid,1,gamm,FALSE,FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1000,20,diagonal,iid,1,bam,FALSE,TRUE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1000,20,diagonal,iid,2,gamm,FALSE,FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1000,20,diagonal,iid,2,bam,FALSE,TRUE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1000,20,diagonal,iid,3,gamm,FALSE,FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1000,20,diagonal,iid,3,bam,FALSE,TRUE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1000,20,diagonal,iid,4,gamm,FALSE,FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

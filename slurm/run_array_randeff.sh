@@ -41,7 +41,7 @@ PZ_LIST=(5 8 20)
 D_TYPE_LIST=(diagonal unstructured)
 # compound_symmetry dropped: bam runs iid only, so CS cells could not put all
 # three methods on comparable footing. Add it back here and in _CORR_KEEP in
-# experiments/randeff_comparison/analyze_results.py together.
+# simulation_experiments/randeff_comparison/analyze_results.py together.
 CORR_LIST=(iid)
 
 PARTITION="standard"
@@ -50,7 +50,7 @@ R_MODULE="R"
 
 PROJECT_ROOT="$(pwd)"
 bash "$PROJECT_ROOT/slurm/check_torchpalmm.sh" || exit 1
-EXP_DIR="$PROJECT_ROOT/experiments/randeff_comparison"
+EXP_DIR="$PROJECT_ROOT/simulation_experiments/randeff_comparison"
 LOG_DIR="$PROJECT_ROOT/slurm/logs_randeff"
 mkdir -p "$LOG_DIR"
 

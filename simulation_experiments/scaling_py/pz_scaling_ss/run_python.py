@@ -3,7 +3,7 @@ Fit the smoothing-spline mixed model on the pz_scaling_ss data (N=1000, px=2,
 sn=1 fixed, pz swept). Driver: resume, chronic-timeout skip, LR sweep with
 every row written.
 
-Run from: experiments/scaling_py/pz_scaling_ss/
+Run from: simulation_experiments/scaling_py/pz_scaling_ss/
     python run_python.py --pz 10 --D_type diagonal
     python run_python.py                 # all configs in data/config.json
 """

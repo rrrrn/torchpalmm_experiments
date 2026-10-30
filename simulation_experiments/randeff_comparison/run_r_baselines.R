@@ -3,7 +3,7 @@
 #   bam  : single smooth + bs="re" random effects (diagonal D only)
 #
 # Run from project root:
-#   Rscript experiments/randeff_comparison/run_r_baselines.R --N 500 --pz 4 --D_type diagonal
+#   Rscript simulation_experiments/randeff_comparison/run_r_baselines.R --N 500 --pz 4 --D_type diagonal
 #
 # --only gamm|bam restricts the run to one method, writing to its own suffixed
 # CSV (e.g. r_randeff_results_bam.csv) so gamm and bam can be submitted as

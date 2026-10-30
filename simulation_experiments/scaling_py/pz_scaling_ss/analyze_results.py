@@ -11,7 +11,7 @@ values it "covered" were silently missing columns or on a different footing
 than a genuinely local fit. A pz with no local rows now just shows "no
 results" until it's actually fit here.
 
-Run from: experiments/scaling_py/pz_scaling_ss/
+Run from: simulation_experiments/scaling_py/pz_scaling_ss/
     python analyze_results.py
 """
 import glob

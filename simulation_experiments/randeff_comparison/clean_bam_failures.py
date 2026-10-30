@@ -5,7 +5,7 @@ so the R runner will attempt those reps again on the next submission.
 fail_type='other': converged=FALSE AND time_s not NA AND ise_macro is NA
   (i.e. bam ran but crashed without producing estimates -- not a timeout)
 
-Run from: experiments/randeff_comparison/
+Run from: simulation_experiments/randeff_comparison/
     uv run python clean_bam_failures.py [--dry-run]
 """
 import argparse

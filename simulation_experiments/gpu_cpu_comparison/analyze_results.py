@@ -1,6 +1,6 @@
 """
 Pair the GPU rows from run_gpu.py against CPU rows borrowed from
-experiments/scaling_py/, at the largest cell of each pilot.
+simulation_experiments/scaling_py/, at the largest cell of each pilot.
 
 CPU rows come from each pilot's own _load() (imported from its analyze_results.py,
 so its local/fallback logic is exercised unchanged) filtered to that pilot's extreme
@@ -10,7 +10,7 @@ device the only difference.
 
 Only reps where BOTH devices converged are compared. Writes plots/gpu_cpu_combined.png.
 
-Run from: experiments/gpu_cpu_comparison/
+Run from: simulation_experiments/gpu_cpu_comparison/
     python analyze_results.py
 """
 import glob

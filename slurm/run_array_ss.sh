@@ -53,7 +53,7 @@ R_METHODS=(gamm bam)
 [[ "$ONLY" == "bam"  ]] && R_METHODS=(bam)
 [[ "$ONLY" == "gamm" ]] && R_METHODS=(gamm)
 
-# Factor grid -- keep in sync with experiments/smoothspline_comparison/generate_data.py CONFIG.
+# Factor grid -- keep in sync with simulation_experiments/smoothspline_comparison/generate_data.py CONFIG.
 N_LIST_PURE=(100 500 5000)
 N_LIST_MIXED=(500 1000)
 if [[ -n "$N_OVERRIDE" ]]; then N_LIST_PURE=("$N_OVERRIDE"); N_LIST_MIXED=("$N_OVERRIDE"); fi
@@ -66,7 +66,7 @@ ACCOUNT="${SLURM_ACCOUNT:?export SLURM_ACCOUNT=<your SLURM account>}"
 
 PROJECT_ROOT="$(pwd)"
 bash "$PROJECT_ROOT/slurm/check_torchpalmm.sh" || exit 1
-EXP_DIR="$PROJECT_ROOT/experiments/smoothspline_comparison"
+EXP_DIR="$PROJECT_ROOT/simulation_experiments/smoothspline_comparison"
 LOG_DIR="$PROJECT_ROOT/slurm/logs_ss"
 mkdir -p "$LOG_DIR"
 

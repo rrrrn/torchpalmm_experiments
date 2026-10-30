@@ -1,0 +1,10 @@
+"N","pz","sn","D_type","repeat_id","method","converged","time_s","mem_mb","n_iter","beta_mse","beta_mae","sigma2_abs_err","D_mse","D_mae","D_frob","D_stein","ise_macro","ise_median","data_checksum","error_msg","k_final","k_retries"
+1000,2,10,"diagonal",4,"gamm",TRUE,7171.016,4191.08203125,NA,4.90010000833619e-06,0.00186427258264177,0.0661325964818551,0.00707130994706809,0.0796505421259808,0.118922747022652,0.00288553015956161,0.00809639118848315,0.000627856563562262,"705dcc025ff43e7e","NA/NaN/Inf in foreign function call (arg 3)",62,3
+1000,2,10,"diagonal",5,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"ccbdfffdbbb72ec7",NA,500,0
+1000,2,10,"diagonal",6,"gamm",TRUE,7997.991,695.890625,NA,8.56987909913986e-05,0.00925217008199475,3.143756926884,2.61353203935469,1.6149011920233,2.2862773407243,618.174209254005,0.0128735717822616,0.000908602787611093,"7662c0c87ecb3ada","NA/NaN/Inf in foreign function call (arg 3)",31,4
+1000,2,10,"diagonal",7,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"51f048773ba3565e",NA,500,0
+1000,2,10,"diagonal",8,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"95078e47bd8cef73",NA,500,0
+1000,2,10,"diagonal",9,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"4067930f186cadf5",NA,500,0
+1000,2,10,"diagonal",10,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"fe8ad1a7cbea251a",NA,500,0
+1000,2,10,"diagonal",11,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"7e2c701c69e26e2f",NA,500,0
+1000,2,10,"diagonal",12,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"9e8872c75222dc6b",NA,500,0

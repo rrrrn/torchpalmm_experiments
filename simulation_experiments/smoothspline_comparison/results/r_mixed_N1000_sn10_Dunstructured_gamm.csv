@@ -1,0 +1,15 @@
+"N","pz","sn","D_type","repeat_id","method","converged","time_s","mem_mb","n_iter","beta_mse","beta_mae","sigma2_abs_err","D_mse","D_mae","D_frob","D_stein","ise_macro","ise_median","data_checksum","error_msg","k_final","k_retries"
+1000,2,10,"unstructured",4,"gamm",FALSE,8793.007,4369.6796875,NA,0.000108773769007942,0.0096133251515631,1.129807496996,0.377163533428277,0.604242284992789,0.868808427325453,NA,0.00834587857408386,0.00102607914686277,"556cbc13cafa1165","NA/NaN/Inf in foreign function call (arg 3)",62,3
+1000,2,10,"unstructured",5,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"66b69baac221eb09",NA,500,0
+1000,2,10,"unstructured",6,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"91a756f05d64b4fd",NA,500,0
+1000,2,10,"unstructured",7,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"40865a08b1b90367",NA,500,0
+1000,2,10,"unstructured",8,"gamm",FALSE,6599.628,-572.0703125,NA,5.43134423260046e-05,0.00617809340935666,0.509126256225,0.041732669468078,0.20386047049556,0.323118994538276,72.1647206954857,0.0115614614961103,0.000703491548876615,"07938e0553db483c","NA/NaN/Inf in foreign function call (arg 3)",31,4
+1000,2,10,"unstructured",9,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"21797c036f01d033","NA/NaN/Inf in foreign function call (arg 3)",20,5
+1000,2,10,"unstructured",10,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"38b6946399a746b4",NA,500,0
+1000,2,10,"unstructured",11,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"9941e516f42184ca",NA,500,0
+1000,2,10,"unstructured",12,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"e56755ddd7c265f8",NA,500,0
+1000,2,10,"unstructured",13,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"86cc92112968b6f2","NA/NaN/Inf in foreign function call (arg 3)",20,5
+1000,2,10,"unstructured",14,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"d64e4ca60ba5a2ed",NA,500,0
+1000,2,10,"unstructured",15,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"441d37d446d86e24",NA,500,0
+1000,2,10,"unstructured",16,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"b90dcb2392961ceb","NA/NaN/Inf in foreign function call (arg 3)",125,2
+1000,2,10,"unstructured",17,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"12440334c0150aa7",NA,500,0

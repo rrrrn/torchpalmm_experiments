@@ -1,5 +1,5 @@
 """
-Run from: experiments/smoothspline_comparison/
+Run from: simulation_experiments/smoothspline_comparison/
     python generate_data.py
 """
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-# GPU vs CPU comparison at the largest cell of experiments/scaling_py/ss_scaling
+# GPU vs CPU comparison at the largest cell of simulation_experiments/scaling_py/ss_scaling
 # (sn=30). See also slurm/run_gpu_cpu_m.sh, which also covers sn=10.
 #
 # Chain: generate the extreme data slice (CPU, standard partition)
@@ -29,8 +29,8 @@ PARTITION="standard"; GPU_PARTITION="gpu"
 ACCOUNT="${SLURM_ACCOUNT:?export SLURM_ACCOUNT=<your SLURM account>}"
 PROJECT_ROOT="$(pwd)"
 bash "$PROJECT_ROOT/slurm/check_torchpalmm.sh" || exit 1
-EXP_DIR="$PROJECT_ROOT/experiments/gpu_cpu_comparison"
-PILOT_DIR="$PROJECT_ROOT/experiments/scaling_py"
+EXP_DIR="$PROJECT_ROOT/simulation_experiments/gpu_cpu_comparison"
+PILOT_DIR="$PROJECT_ROOT/simulation_experiments/scaling_py"
 LOG_DIR="$PROJECT_ROOT/slurm/logs_gpu_cpu"
 mkdir -p "$LOG_DIR"
 

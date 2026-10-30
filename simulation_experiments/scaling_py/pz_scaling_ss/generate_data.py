@@ -1,7 +1,7 @@
 """
 pz-scaling pilot (our method only): number of random effects pz swept, with
 N=1000, px=2, sn=1 fixed. One of two single-axis scaling pilots in
-experiments/scaling_py/ (ss_scaling varies sn; pz_scaling_ss varies pz)
+simulation_experiments/scaling_py/ (ss_scaling varies sn; pz_scaling_ss varies pz)
 sharing the same default point (sn=1, px=2, pz=2, N=1000) and no R baselines. Isolates how random-effects
 covariance (D) estimation degrades as D grows (unstructured D has
 pz(pz+1)/2 free params) -- mirrors randeff_comparison's own pz sweep, minus
@@ -11,7 +11,7 @@ Uses SimScripts.RandeffLMM.generate_randeff_data (sn=1 hardcoded, single
 un-standardized true curve f(t)=2*sin(pi*t)), the same generator
 randeff_comparison uses.
 
-Run from: experiments/scaling_py/pz_scaling_ss/
+Run from: simulation_experiments/scaling_py/pz_scaling_ss/
     python generate_data.py                 # all cells/reps
     python generate_data.py --pz 10          # one pz slice
     python generate_data.py --reps 3         # pilot

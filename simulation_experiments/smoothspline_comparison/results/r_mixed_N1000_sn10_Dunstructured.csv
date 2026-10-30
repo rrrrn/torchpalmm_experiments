@@ -1,0 +1,4 @@
+"N","pz","sn","D_type","repeat_id","method","converged","time_s","mem_mb","n_iter","beta_mse","beta_mae","sigma2_abs_err","D_mse","D_mae","D_frob","D_stein","ise_macro","ise_median","data_checksum","error_msg","k_final","k_retries"
+1000,2,10,"unstructured",1,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"ad66026a8b862c39","NA/NaN/Inf in foreign function call (arg 3)",20,5
+1000,2,10,"unstructured",2,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"6ad2301ec58ab38c",NA,500,0
+1000,2,10,"unstructured",3,"gamm",FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"ba78717d9138d580",NA,500,0

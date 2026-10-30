@@ -3,7 +3,7 @@ Random-effects scaling experiment (sn=1, pz swept): writes the R-failure
 diagnostic plot and the parameter-recovery LaTeX table from the lr = 1.0
 Python fits merged with the R baselines.
 
-Run from: experiments/randeff_comparison/
+Run from: simulation_experiments/randeff_comparison/
     python analyze_results.py
 """
 

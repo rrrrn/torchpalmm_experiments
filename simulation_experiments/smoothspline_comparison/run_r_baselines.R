@@ -12,9 +12,9 @@
 # dataset JSON so the "truth" is identical to what was simulated.
 #
 # Run from project root:
-#   Rscript experiments/smoothspline_comparison/run_r_baselines.R \
+#   Rscript simulation_experiments/smoothspline_comparison/run_r_baselines.R \
 #     --type pure  --N 500
-#   Rscript experiments/smoothspline_comparison/run_r_baselines.R \
+#   Rscript simulation_experiments/smoothspline_comparison/run_r_baselines.R \
 #     --type mixed --N 500 --sn 3 --D_type diagonal
 
 local({

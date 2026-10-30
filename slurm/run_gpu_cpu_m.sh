@@ -34,9 +34,9 @@ PARTITION="standard"; GPU_PARTITION="gpu"
 ACCOUNT="${SLURM_ACCOUNT:?export SLURM_ACCOUNT=<your SLURM account>}"
 PROJECT_ROOT="$(pwd)"
 bash "$PROJECT_ROOT/slurm/check_torchpalmm.sh" || exit 1
-EXP_DIR="$PROJECT_ROOT/experiments/gpu_cpu_comparison"
+EXP_DIR="$PROJECT_ROOT/simulation_experiments/gpu_cpu_comparison"
 PILOT="ss_scaling"
-PILOT_DIR="$PROJECT_ROOT/experiments/scaling_py/$PILOT"
+PILOT_DIR="$PROJECT_ROOT/simulation_experiments/scaling_py/$PILOT"
 LOG_DIR="$PROJECT_ROOT/slurm/logs_gpu_cpu_m"
 mkdir -p "$LOG_DIR"
 

@@ -1,7 +1,7 @@
 """
 sn-scaling pilot (our method only): number of additive smooth components sn
 swept, with N=1000, px=2, pz=2 fixed. One of two single-axis scaling pilots
-in experiments/scaling_py/ (ss_scaling varies sn; pz_scaling_ss varies pz)
+in simulation_experiments/scaling_py/ (ss_scaling varies sn; pz_scaling_ss varies pz)
 sharing the same default point (sn=1, px=2, pz=2, N=1000) and no R baselines.
 
 Each of the sn smooth components uses its own independently-sampled t and its
@@ -11,7 +11,7 @@ mean/unit variance, so growing sn changes model dimension without also
 changing per-observation SNR) -- this is the one sub-experiment that cannot
 reuse SimScripts.RandeffLMM.generate_randeff_data (hardcoded to sn=1).
 
-Run from: experiments/scaling_py/ss_scaling/
+Run from: simulation_experiments/scaling_py/ss_scaling/
     python generate_data.py                 # all cells/reps
     python generate_data.py --sn 10          # one sn slice
     python generate_data.py --reps 3         # pilot

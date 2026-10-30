@@ -1,5 +1,5 @@
 """
-Refit the largest cells of experiments/scaling_py/ss_scaling (sn=10, 30) on one device.
+Refit the largest cells of simulation_experiments/scaling_py/ss_scaling (sn=10, 30) on one device.
 
 Reuses each pilot's own run_python.py (load_data + run_one + OPTIMIZER_CONFIGS)
 so the datasets, seeds, optimizer/lr grid, tolerances and metric code are
@@ -7,7 +7,7 @@ identical to the CPU rows this is compared against; only the device changes.
 SmoothingSplineMixed(device=None) resolves to CUDA when one is visible, so the
 device is chosen by what the job can see, not by a separate code path.
 
-Run from: experiments/gpu_cpu_comparison/
+Run from: simulation_experiments/gpu_cpu_comparison/
     python run_gpu.py --device gpu --reps 20
     python run_gpu.py --device cpu --reps 5 --cell sn30    # same-node control
 """

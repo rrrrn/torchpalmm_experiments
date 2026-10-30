@@ -1,0 +1,7 @@
+numpy>=2.0
+pandas>=2.3
+scipy>=1.13
+matplotlib>=3.9
+torch>=2.8
+tqdm>=4.67
+torchpalmm @ git+https://github.com/rrrrn/torchpalmm.git

@@ -1,5 +1,5 @@
 """
-Run from: experiments/smoothspline_comparison/
+Run from: simulation_experiments/smoothspline_comparison/
     python run_python.py --type pure  [--N N]
     python run_python.py --type mixed [--N N] [--pz PZ] [--sn SN] [--D_type diagonal|unstructured]
 """

@@ -3,7 +3,7 @@ Fit the smoothing-spline mixed model on the ss_scaling data (N=1000, px=2,
 pz=2 fixed, sn swept). Driver: resume, chronic-timeout skip, LR sweep with
 every row written; computes one ISE per smooth component, since sn > 1 here.
 
-Run from: experiments/scaling_py/ss_scaling/
+Run from: simulation_experiments/scaling_py/ss_scaling/
     python run_python.py --sn 10 --D_type diagonal
     python run_python.py                 # all configs in data/config.json
 """

@@ -3,7 +3,7 @@ Fit the smoothing-spline mixed model on the random-effects scaling data
 (sn=1, pz swept). Mirrors smoothspline_comparison/run_python.py but sweeps pz
 instead of sn.
 
-Run from: experiments/randeff_comparison/
+Run from: simulation_experiments/randeff_comparison/
     python run_python.py --N 500 --pz 4 --D_type diagonal
     python run_python.py                 # all configs in config_randeff.json
 """
