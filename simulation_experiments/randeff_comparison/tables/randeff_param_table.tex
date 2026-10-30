@@ -1,0 +1,35 @@
+% \cdashline between cells requires \usepackage{arydshln} in the preamble.
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{rlrrrrrrr}
+\toprule
+$p_z$ & method & $n$ & $\beta$ MAE ($\times 10^{-3}$) & $|\sigma^2-\hat{\sigma}^2|$ ($\times 10^{-3}$) & $D$ MAE ($\times 10^{-3}$) & MISE ($\times 10^{-3}$) & time (s) & conv. \\
+\midrule
+\multicolumn{9}{l}{\emph{$D$ = diagonal}} \\
+5 & \texttt{torchpalmm} & 43 & 7.49 (3.53) & 12.8 (8.38) & 48.7 (17.5) & 0.691 (0.289) & \textbf{2.35 (0.233)} & 100\% \\
+5 & \texttt{bam} & 43 & 7.49 (3.53) & 12.7 (8.38) & -- & 0.692 (0.290) & 1640 (131) & 43\% \\
+5 & \texttt{gamm} & 43 & 7.49 (3.53) & 12.6 (8.42) & 48.7 (17.5) & 0.697 (0.301) & 440 (7.59) & 100\% \\
+\cdashline{1-9}
+8 & \texttt{torchpalmm} & 98 & 8.76 (4.68) & 13.3 (10.3) & 51.6 (15.7) & 0.771 (0.331) & \textbf{2.25 (0.193)} & 100\% \\
+8 & \texttt{bam} & 0 & -- & -- & -- & -- & -- & 0\% \\
+8 & \texttt{gamm} & 98 & 8.76 (4.68) & 13.5 (10.2) & 51.8 (15.8) & 0.764 (0.348) & 1160 (32.9) & 98\% \\
+\cdashline{1-9}
+20 & \texttt{torchpalmm} & 100 & 16.3 (10.4) & 55.2 (42.7) & 66.0 (12.4) & 2.90 (1.82) & 2.18 (0.166) & \textbf{100\%} \\
+20 & \texttt{bam} & 0 & -- & -- & -- & -- & -- & 0\% \\
+20 & \texttt{gamm} & 0 & -- & -- & -- & -- & -- & 0\% \\
+\midrule
+\multicolumn{9}{l}{\emph{$D$ = unstructured}} \\
+5 & \texttt{torchpalmm} & 59 & 8.02 (4.49) & 11.5 (7.67) & 374 (202) & 0.608 (0.261) & \textbf{6.15 (2.26)} & \textbf{100\%} \\
+5 & \texttt{gamm} & 59 & 8.02 (4.49) & 11.5 (7.70) & 374 (202) & 0.589 (0.241) & 540 (26.3) & 59\% \\
+\cdashline{1-9}
+8 & \texttt{torchpalmm} & 4 & 14.9 (5.29) & 7.03 (5.05) & 652 (261) & 0.875 (0.309) & \textbf{8.53 (3.44)} & \textbf{100\%} \\
+8 & \texttt{gamm} & 4 & 14.9 (5.30) & 7.26 (5.21) & 653 (264) & 0.807 (0.381) & 1780 (20.4) & 5\% \\
+\cdashline{1-9}
+20 & \texttt{torchpalmm} & 100 & 38.9 (22.4) & 187 (142) & 1490 (305) & 10.5 (7.74) & 11.7 (2.88) & \textbf{100\%} \\
+20 & \texttt{gamm} & 0 & -- & -- & -- & -- & -- & 0\% \\
+\bottomrule
+\end{tabular}
+\caption{Parameter recovery and wall time (mean, SD in parentheses, over the $n$ replicates), and convergence under iid residual correlation, at $N=1000$. Within each ($D$, $p_z$) cell, accuracy and time are computed over the $n$ replicates on which python and the participating baselines all converged, so those rows describe identical datasets; a baseline that never converged in a cell is listed at $n=0$ and does not restrict the others. Errors are in their own units rather than as ratios to python, since a ratio of two near-zero or two equally poor errors is not interpretable. The convergence column is the exception to the matching, giving each method's converged/attempted rate over \emph{all} replicates of the cell. Largest gap between a baseline mean and python's: beta 1.7e-05, sigma2 0.00024, ise 6.8e-05, D 0.00035. Bold on an accuracy column marks the method whose mean is both significantly lower than every other method's in that cell (paired $t$-test on replicate-matched errors, $p<0.05$) and ahead of it by more than 10\%, so a floating-point-level but consistently-signed gap cannot bold on significance alone; bold on time or convergence marks a value beating the runner-up by more than 10\%. \texttt{bam} reports no $D$ estimate.}
+\label{tab:randeff-param}
+\end{table}

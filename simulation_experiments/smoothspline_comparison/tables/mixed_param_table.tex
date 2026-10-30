@@ -1,0 +1,39 @@
+% \cdashline between cells requires \usepackage{arydshln} in the preamble.
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{rlrrrrrrr}
+\toprule
+$s_n$ & method & $n$ & $\beta$ MAE ($\times 10^{-3}$) & $|\sigma^2-\hat{\sigma}^2|$ ($\times 10^{-3}$) & $D$ MAE ($\times 10^{-3}$) & MISE ($\times 10^{-3}$) & time (s) & conv. \\
+\midrule
+\multicolumn{9}{l}{\emph{$D$ = diagonal}} \\
+1 & \texttt{torchpalmm} & 99 & 5.31 (2.83) & 7.68 (5.75) & 46.4 (24.1) & 4.47 (12.5) & \textbf{6.31 (1.45)} & 100\% \\
+1 & \texttt{bam} & 99 & 5.31 (2.83) & 7.54 (5.76) & -- & 4.43 (12.3) & 582 (44.0) & 100\% \\
+1 & \texttt{gamm} & 99 & 5.31 (2.83) & 10.1 (25.6) & 46.7 (24.6) & 6.33 (25.7) & 135 (17.1) & 99\% \\
+\cdashline{1-9}
+5 & \texttt{torchpalmm} & 80 & 4.93 (2.71) & 7.21 (5.17) & \textbf{44.7 (29.2)} & 0.585 (0.173) & \textbf{67.1 (14.8)} & 100\% \\
+5 & \texttt{bam} & 80 & 4.93 (2.70) & 7.15 (5.31) & -- & 0.585 (0.173) & 941 (73.1) & 100\% \\
+5 & \texttt{gamm} & 80 & 5.13 (2.96) & 196 (545) & 133 (265) & 0.676 (0.341) & 1350 (437) & 80\% \\
+\cdashline{1-9}
+10 & \texttt{torchpalmm} & 100 & 5.42 (2.84) & 7.49 (5.46) & 47.2 (27.3) & 0.584 (0.0843) & \textbf{261 (48.0)} & 100\% \\
+10 & \texttt{bam} & 100 & 5.42 (2.84) & 7.49 (5.46) & -- & 0.584 (0.0843) & 1520 (148) & 100\% \\
+10 & \texttt{gamm} & 0 & -- & -- & -- & -- & -- & 0\% \\
+\cdashline{1-9}
+15 & \texttt{torchpalmm} & 100 & 5.99 (3.36) & 9.31 (6.79) & 43.8 (32.1) & 0.572 (0.0786) & 526 (92.9) & 100\% \\
+\midrule
+\multicolumn{9}{l}{\emph{$D$ = unstructured}} \\
+1 & \texttt{torchpalmm} & 74 & 6.26 (2.99) & \textbf{7.69 (5.34)} & 20.1 (15.5) & \textbf{2.90 (10.1)} & \textbf{9.91 (2.15)} & \textbf{100\%} \\
+1 & \texttt{gamm} & 74 & 6.26 (3.04) & 20.5 (53.8) & 20.3 (15.6) & 13.0 (52.6) & 139 (19.0) & 74\% \\
+\cdashline{1-9}
+5 & \texttt{torchpalmm} & 11 & 4.55 (2.80) & \textbf{7.24 (6.27)} & \textbf{32.0 (30.1)} & \textbf{0.493 (0.104)} & \textbf{97.1 (20.3)} & \textbf{100\%} \\
+5 & \texttt{gamm} & 11 & 6.05 (4.13) & 297 (380) & 158 (174) & 0.581 (0.210) & 1430 (555) & 11\% \\
+\cdashline{1-9}
+10 & \texttt{torchpalmm} & 100 & 4.94 (2.66) & 7.46 (5.93) & 25.5 (22.8) & 0.571 (0.0896) & 399 (68.8) & \textbf{100\%} \\
+10 & \texttt{gamm} & 0 & -- & -- & -- & -- & -- & 0\% \\
+\cdashline{1-9}
+15 & \texttt{torchpalmm} & 81 & 6.01 (3.26) & 12.5 (23.5) & 19.5 (18.0) & 0.572 (0.0944) & 837 (103) & 100\% \\
+\bottomrule
+\end{tabular}
+\caption{Smoothing accuracy, parameter recovery and wall time (mean, SD in parentheses, over the $n$ replicates), and convergence, at $N=1000$. Within each ($D$, $s_n$) cell, accuracy and time are computed over the $n$ replicates on which python and the participating baselines all converged, so those rows describe identical datasets; a baseline that never converged in a cell is listed at $n=0$ and does not restrict the others. Errors are in their own units rather than as ratios to python, since a ratio of two near-zero or two equally poor errors is not interpretable. MISE is the median per-component ISE. The convergence column is the exception to the matching, giving each method's converged/attempted rate over \emph{all} replicates of the cell. Largest gap between a baseline mean and python's: beta 0.0015, sigma2 0.29, mise 0.01, D 0.13. Bold on an accuracy column marks the method whose mean is both significantly lower than every other method's in that cell (paired $t$-test on replicate-matched errors, $p<0.05$) and ahead of it by more than 10\%, so a floating-point-level but consistently-signed gap cannot bold on significance alone; bold on time or convergence marks a value beating the runner-up by more than 10\%. \texttt{bam}'s $D$ MAE is marked -- : its per-column variance estimate ($D_c=\hat\sigma^2/\lambda_c$, read off \texttt{mgcv}'s per-term smoothing parameters) is not comparable, since jointly fitting more than one random-slope term under the same grouping factor systematically under-penalizes every column after the first, inflating its estimate by roughly an order of magnitude in every replicate tested regardless of the underlying data.}
+\label{tab:mixed-param}
+\end{table}
