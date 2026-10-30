@@ -10,7 +10,7 @@ Reuses MIXED_SS_CURVES (true function) and adaptive grid logic from LMMSS.
 
 import numpy as np
 import torch
-from SimScripts.LMMSS import MIXED_SS_CURVES
+from simscripts.LMMSS import MIXED_SS_CURVES
 
 
 def generate_randeff_data(
@@ -84,7 +84,7 @@ def generate_randeff_data(
         x_list.append(x_i)
 
         # Random effects matrix Z (l_i x pz): first column is a random intercept,
-        # remaining pz-1 columns i.i.d. N(0,1) (mirrors SimScripts/LMMSS.py).
+        # remaining pz-1 columns i.i.d. N(0,1) (mirrors simscripts/LMMSS.py).
         if pz > 0:
             z_i = np.hstack((np.ones((l_i, 1)),
                              np.random.normal(0, 1, size=(l_i, max(pz - 1, 0)))))

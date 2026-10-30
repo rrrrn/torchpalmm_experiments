@@ -44,7 +44,7 @@ def _rss_mb():
     except Exception:
         return float("nan")
 
-from SimScripts.LMMSS import (global_curve, local_curve, MIXED_SS_CURVES,
+from simscripts.LMMSS import (global_curve, local_curve, MIXED_SS_CURVES,
                                generate_pure_ss_data,
                                generate_smoothing_spline_lmm_data,
                                ss_curve_ids, MIXED_SS_CURVE_STATS,

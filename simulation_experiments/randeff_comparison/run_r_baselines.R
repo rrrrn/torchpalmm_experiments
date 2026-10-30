@@ -108,7 +108,7 @@ defer_config <- function(N, pz, D_type, corr, method, n_timeouts) {
 
 trapz <- function(x, y) sum(diff(x) * (head(y, -1) + tail(y, -1)) / 2)
 
-## True curve f0 (mirrors MIXED_SS_CURVES[0] in SimScripts/LMMSS.py)
+## True curve f0 (mirrors MIXED_SS_CURVES[0] in simscripts/LMMSS.py)
 true_curve <- function(t) 2 * sin(pi * t)
 
 compute_ise <- function(t_grid, fitted, true) {

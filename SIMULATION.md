@@ -2,11 +2,11 @@
 
 ## Overview
 
-This repo holds the numerical experiments for [`torchpalmm`](https://github.com/rrrrn/torchpalmm): REML estimation for linear mixed models with additive smoothing-spline components. The data generators live in `SimScripts/` and the experiments in `simulation_experiments/`.
+This repo holds the numerical experiments for [`torchpalmm`](https://github.com/rrrrn/torchpalmm): REML estimation for linear mixed models with additive smoothing-spline components. The experiments and their data generators (`simscripts/`) live in `simulation_experiments/`.
 
 ---
 
-## 1. Smoothing Spline LMM Generator (`SimScripts/LMMSS.py`)
+## 1. Smoothing Spline LMM Generator (`simulation_experiments/simscripts/LMMSS.py`)
 
 ### Model
 
@@ -39,11 +39,11 @@ x, z, y, spline_vars, subject_id, beta, D, sigma2
 
 `y` is mean-centered before it is saved by the experiments.
 
-`SimScripts/LMMSS.py` also contains `generate_pure_ss_data`, a single-smooth generator with no fixed or random effects (scenarios `global` and `local`).
+`simulation_experiments/simscripts/LMMSS.py` also contains `generate_pure_ss_data`, a single-smooth generator with no fixed or random effects (scenarios `global` and `local`).
 
 ---
 
-## 2. Random-Effects Generator (`SimScripts/RandeffLMM.py`)
+## 2. Random-Effects Generator (`simulation_experiments/simscripts/RandeffLMM.py`)
 
 `generate_randeff_data` simulates a single smooth ($f(t) = 2\sin(\pi t)$, sn = 1) with `pz` random effects and iid or compound-symmetry residuals. It reuses `MIXED_SS_CURVES` from `LMMSS.py`. The seed is derived from `(N, pz, repeat_id, lmin)`.
 

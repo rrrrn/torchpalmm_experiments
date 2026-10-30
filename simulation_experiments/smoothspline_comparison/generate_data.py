@@ -19,7 +19,7 @@ from itertools import product
 import numpy as np
 import torch
 
-from SimScripts.LMMSS import (generate_pure_ss_data, generate_smoothing_spline_lmm_data,
+from simscripts.LMMSS import (generate_pure_ss_data, generate_smoothing_spline_lmm_data,
                               ss_curve_ids, ss_knot_count, MIXED_SS_CURVE_STATS,
                               y_checksum)
 

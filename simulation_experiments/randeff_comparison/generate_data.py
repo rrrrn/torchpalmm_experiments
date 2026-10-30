@@ -14,7 +14,7 @@ import os
 
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_SCRIPT_DIR)
-sys.path.insert(0, os.path.abspath(os.path.join(_SCRIPT_DIR, "../..")))
+sys.path.insert(0, os.path.abspath(os.path.join(_SCRIPT_DIR, "..")))
 
 # Data directory — overridable so Python and R chains use separate dirs and
 # never race on the same JSON files.
@@ -26,7 +26,7 @@ from itertools import product
 import numpy as np
 import torch
 
-from SimScripts.RandeffLMM import generate_randeff_data
+from simscripts.RandeffLMM import generate_randeff_data
 
 
 RANDEFF_CONFIG = {

@@ -125,7 +125,7 @@ K_FLOOR    <- 20
 
 trapz <- function(x, y) sum(diff(x) * (head(y, -1) + tail(y, -1)) / 2)
 
-# --- true curve library (mirrors MIXED_SS_CURVES in SimScripts/LMMSS.py) -----
+# --- true curve library (mirrors MIXED_SS_CURVES in simscripts/LMMSS.py) -----
 
 mixed_curves <- list(
   function(t) 2 * sin(pi * t),                                       # 0

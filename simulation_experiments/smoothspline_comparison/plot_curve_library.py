@@ -29,8 +29,8 @@ TRUE_COLOR, FIT_COLOR = "#00558A", "#C77700"
 import matplotlib.pyplot as plt
 
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.abspath(os.path.join(_SCRIPT_DIR, "../..")))
-from SimScripts.LMMSS import MIXED_SS_CURVE_LABELS  # noqa: E402
+sys.path.insert(0, os.path.abspath(os.path.join(_SCRIPT_DIR, "..")))
+from simscripts.LMMSS import MIXED_SS_CURVE_LABELS  # noqa: E402
 
 PLOT_DIR = os.path.join(_SCRIPT_DIR, "plots")
 DEFAULT_CELL_DIR = os.path.join(_SCRIPT_DIR, "results", "curve_library")

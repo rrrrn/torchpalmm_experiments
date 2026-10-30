@@ -225,7 +225,7 @@ def generate_smoothing_spline_lmm_data(N, spline_dimension=1, sigma_scale=1.0,
     ]
     x_list = [np.random.randn(l, px) for l in lengths] if px > 0 else [np.zeros((l, 0)) for l in lengths]
     # Random effects matrix Z: first column is a random intercept, remaining
-    # pz-1 columns i.i.d. N(0,1) (mirrors SimScripts/RandeffLMM.py).
+    # pz-1 columns i.i.d. N(0,1) (mirrors simscripts/RandeffLMM.py).
     if pz > 0:
         z_list = [np.hstack((np.ones((l, 1)), np.random.randn(l, max(pz - 1, 0))))
                   for l in lengths]

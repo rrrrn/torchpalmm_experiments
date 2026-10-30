@@ -10,7 +10,6 @@ dependencies = [
     "torch",
     "tqdm",
     "scipy",
-    "h5py",
 ]
 
 [build-system]
@@ -18,5 +17,5 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-where = ["."]
-include = ["SimScripts*"]   # torchpalmm/ is a standalone project (its own pyproject)
+where = ["simulation_experiments"]
+include = ["simscripts*"]   # torchpalmm/ is a standalone project (its own pyproject)

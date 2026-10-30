@@ -13,7 +13,7 @@ import os
 
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_SCRIPT_DIR)
-sys.path.insert(0, os.path.abspath(os.path.join(_SCRIPT_DIR, "../..")))
+sys.path.insert(0, os.path.abspath(os.path.join(_SCRIPT_DIR, "..")))
 
 DATA_DIR = os.environ.get("RE_DATA_DIR", "data")
 
@@ -30,7 +30,7 @@ import pandas as pd
 import torch
 from tqdm import tqdm
 
-from SimScripts.LMMSS import MIXED_SS_CURVES, generate_smoothing_spline_lmm_data
+from simscripts.LMMSS import MIXED_SS_CURVES, generate_smoothing_spline_lmm_data
 from torchpalmm import SmoothingSplineMixed
 
 # ISE is integrated on a fixed dense grid over [0, 1] (matches the R gamm/bam
@@ -75,7 +75,7 @@ def _rss_mb():
 
 
 def load_randeff(N, pz, D_type, corr, rid):
-    from SimScripts.RandeffLMM import generate_randeff_data
+    from simscripts.RandeffLMM import generate_randeff_data
 
     path = f"{DATA_DIR}/randeff_N{N}_pz{pz}_D{D_type}_C{corr}_repeat{rid}.json"
     if os.path.exists(path):

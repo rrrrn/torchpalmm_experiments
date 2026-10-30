@@ -13,7 +13,7 @@ import os
 
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_SCRIPT_DIR)
-sys.path.insert(0, os.path.abspath(os.path.join(_SCRIPT_DIR, "../../..")))
+sys.path.insert(0, os.path.abspath(os.path.join(_SCRIPT_DIR, "../..")))
 
 import argparse
 import json
@@ -28,7 +28,7 @@ import pandas as pd
 import torch
 from tqdm import tqdm
 
-from SimScripts.LMMSS import MIXED_SS_CURVES
+from simscripts.LMMSS import MIXED_SS_CURVES
 from torchpalmm import SmoothingSplineMixed
 
 try:

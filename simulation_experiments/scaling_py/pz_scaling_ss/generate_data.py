@@ -7,7 +7,7 @@ covariance (D) estimation degrades as D grows (unstructured D has
 pz(pz+1)/2 free params) -- mirrors randeff_comparison's own pz sweep, minus
 the R baselines and the corr axis (iid only here).
 
-Uses SimScripts.RandeffLMM.generate_randeff_data (sn=1 hardcoded, single
+Uses simscripts.RandeffLMM.generate_randeff_data (sn=1 hardcoded, single
 un-standardized true curve f(t)=2*sin(pi*t)), the same generator
 randeff_comparison uses.
 
@@ -22,7 +22,7 @@ import os
 
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_SCRIPT_DIR)
-sys.path.insert(0, os.path.abspath(os.path.join(_SCRIPT_DIR, "../../..")))
+sys.path.insert(0, os.path.abspath(os.path.join(_SCRIPT_DIR, "../..")))
 
 import json
 from itertools import product
@@ -30,7 +30,7 @@ from itertools import product
 import numpy as np
 import torch
 
-from SimScripts.RandeffLMM import generate_randeff_data
+from simscripts.RandeffLMM import generate_randeff_data
 
 
 N  = 1000    # subjects, fixed

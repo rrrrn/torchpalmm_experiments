@@ -5,11 +5,11 @@ in simulation_experiments/scaling_py/ (ss_scaling varies sn; pz_scaling_ss varie
 sharing the same default point (sn=1, px=2, pz=2, N=1000) and no R baselines.
 
 Each of the sn smooth components uses its own independently-sampled t and its
-own true curve, drawn per replicate from SimScripts.LMMSS.MIXED_SS_CURVES via
-SimScripts.LMMSS.ss_curve_ids(repeat_id, sn) (curves standardized to zero
+own true curve, drawn per replicate from simscripts.LMMSS.MIXED_SS_CURVES via
+simscripts.LMMSS.ss_curve_ids(repeat_id, sn) (curves standardized to zero
 mean/unit variance, so growing sn changes model dimension without also
 changing per-observation SNR) -- this is the one sub-experiment that cannot
-reuse SimScripts.RandeffLMM.generate_randeff_data (hardcoded to sn=1).
+reuse simscripts.RandeffLMM.generate_randeff_data (hardcoded to sn=1).
 
 Run from: simulation_experiments/scaling_py/ss_scaling/
     python generate_data.py                 # all cells/reps
@@ -22,7 +22,7 @@ import os
 
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_SCRIPT_DIR)
-sys.path.insert(0, os.path.abspath(os.path.join(_SCRIPT_DIR, "../../..")))
+sys.path.insert(0, os.path.abspath(os.path.join(_SCRIPT_DIR, "../..")))
 
 import json
 from itertools import product
@@ -30,7 +30,7 @@ from itertools import product
 import numpy as np
 import torch
 
-from SimScripts.LMMSS import (generate_smoothing_spline_lmm_data, ss_curve_ids,
+from simscripts.LMMSS import (generate_smoothing_spline_lmm_data, ss_curve_ids,
                               ss_knot_count, MIXED_SS_CURVE_STATS, y_checksum)
 
 
